@@ -1,0 +1,7 @@
+BUILD/
+DebugConfig/
+*.bak
+exampleCommandParserCustomizeParameters.uv*
+GettingStarted.html
+mbed_config.h
+.mbed
