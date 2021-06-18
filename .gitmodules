@@ -1,3 +1,6 @@
-[submodule "CommandParser"]
-	path = CommandParser
-	url = git@github.com:ATM-HSW/CommandParser.git
+[submodule "customizeParameters/libCommandParser"]
+	path = customizeParameters/libCommandParser
+	url = git@github.com:ATM-HSW/libCommandParser.git
+[submodule "serialCommands/libCommandParser"]
+	path = serialCommands/libCommandParser
+	url = git@github.com:ATM-HSW/libCommandParser.git

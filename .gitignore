@@ -5,3 +5,6 @@ exampleCommandParserCustomizeParameters.uv*
 GettingStarted.html
 mbed_config.h
 .mbed
+*.uvoptx
+*.uvprojx
+*.uvguix.*
