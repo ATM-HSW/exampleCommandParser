@@ -35,9 +35,12 @@ int main() {
   
   printf("Start\n");
 
-  parser.registerCommand("move", "ii", &cmd_move); // two int64_t arguments
-  parser.registerCommand("jump", "", &cmd_jump); // no arguments
-  parser.registerCommand("say", "s", &cmd_say); // one string argument
+  if(!parser.registerCommand("move", "ii", &cmd_move)) // two int64_t arguments
+    printf("error registering 'move'\n");
+  if(!parser.registerCommand("jump", "", &cmd_jump)) // no arguments
+    printf("error registering 'jump'\n");
+  if(!parser.registerCommand("say", "s", &cmd_say)) // one string argument
+    printf("error registering 'say'\n");
 
   printf("let's try a simple example...\n");
   parser.processCommand("move 45 -23", response);
