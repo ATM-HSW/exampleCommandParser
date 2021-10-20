@@ -10,7 +10,7 @@ uint8_t buffer0[BUF_LEN];
 uint8_t buffer1[BUF_LEN];
 volatile uint8_t NewData = 0;
 
-UnbufferedSerial rser(USBTX, USBRX);
+UnbufferedSerial rser(USBTX, USBRX, MBED_CONF_PLATFORM_STDIO_BAUD_RATE);
 MyCommandParser parser;
 
 void serialCb() {
@@ -44,8 +44,6 @@ void cmd_test(MyCommandParser::Argument *args, char *response) {
 int main() {
   char response[MyCommandParser::MAX_RESPONSE_SIZE];
   
-  rser.baud(115200);
-
   printf("Start\n");
 
   parser.registerCommand("TEST", "sdiu", "example: TEST \"def\" -1.234e5 -123 123\n", &cmd_test);
